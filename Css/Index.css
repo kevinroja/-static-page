@@ -1,0 +1,126 @@
+/* Fuente base y colores generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #e5e7eb;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+main {
+    max-width: 960px;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.9);
+    border-radius: 16px;
+    box-shadow:
+        0 18px 45px rgba(15, 23, 42, 0.9),
+        0 0 0 1px rgba(148, 163, 184, 0.25);
+    padding: 2.5rem 2rem 2rem;
+}
+
+h1 {
+    font-size: 2.1rem;
+    text-align: center;
+    margin-bottom: 1.75rem;
+    color: #f9fafb;
+    letter-spacing: 0.02em;
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    color: #38bdf8; /* azul luminoso, profesional pero vivo */
+}
+
+section {
+    background: rgba(15, 23, 42, 0.9);
+    border-radius: 12px;
+    padding: 1.5rem 1.4rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+section:nth-of-type(2) {
+    border-left: 4px solid #22c55e;
+}
+
+section:nth-of-type(3) {
+    border-left: 4px solid #f97316;
+}
+
+section:nth-of-type(4) {
+    border-left: 4px solid #6366f1;
+}
+
+section:nth-of-type(5) {
+    border-left: 4px solid #ec4899;
+}
+
+p {
+    line-height: 1.7;
+    margin-bottom: 0.6rem;
+    color: #e5e7eb;
+}
+
+ul {
+    margin-left: 1.2rem;
+    margin-top: 0.35rem;
+}
+
+li {
+    margin-bottom: 0.3rem;
+}
+
+/* Enlaces a las biografías */
+ul li a {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+}
+
+ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #38bdf8, #22c55e);
+    transition: width 0.18s ease-out;
+}
+
+ul li a:hover {
+    color: #f9fafb;
+}
+
+ul li a:hover::after {
+    width: 100%;
+}
+
+/* Adaptación a pantallas pequeñas */
+@media (max-width: 600px) {
+    body {
+        padding: 1.25rem 0.5rem;
+    }
+
+    main {
+        padding: 1.8rem 1.25rem 1.4rem;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    h2 {
+        font-size: 1.15rem;
+    }
+}
